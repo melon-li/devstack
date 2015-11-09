@@ -1,0 +1,31 @@
+ctl      12623  0.0  0.2 150920 74088 pts/31   S+   08:13   0:01 /usr/bin/python /usr/local/bin/glance-registry --config-file=/etc/glance/glance-registry.conf
+ctl      12656  0.0  0.2 155016 75068 pts/31   S+   08:13   0:00 /usr/bin/python /usr/local/bin/glance-registry --config-file=/etc/glance/glance-registry.conf
+ctl      12657  0.0  0.2 154760 74936 pts/31   S+   08:13   0:00 /usr/bin/python /usr/local/bin/glance-registry --config-file=/etc/glance/glance-registry.conf
+ctl      12663  0.8  0.2 180812 85636 pts/32   S+   08:13   0:24 /usr/bin/python /usr/local/bin/glance-api --config-file=/etc/glance/glance-api.conf
+ctl      12676  2.2  0.2 189216 90944 pts/32   S+   08:14   1:06 /usr/bin/python /usr/local/bin/glance-api --config-file=/etc/glance/glance-api.conf
+ctl      12677  0.0  0.2 186780 87576 pts/32   S+   08:14   0:00 /usr/bin/python /usr/local/bin/glance-api --config-file=/etc/glance/glance-api.conf
+ctl      40341  0.0  0.0  15948  2484 pts/51   S+   09:03   0:00 grep --color=auto glance
+ctl      12798  0.8  0.4 314048 136692 pts/33  S+   08:14   0:26 /usr/bin/python /usr/local/bin/nova-api
+ctl      12813  0.0  0.3 289016 103556 pts/33  S+   08:14   0:00 /usr/bin/python /usr/local/bin/nova-api
+ctl      12814  0.0  0.3 289016 103556 pts/33  S+   08:14   0:00 /usr/bin/python /usr/local/bin/nova-api
+ctl      12817  2.0  0.4 343268 159020 pts/33  S+   08:14   1:02 /usr/bin/python /usr/local/bin/nova-api
+ctl      12818  2.1  0.4 344632 160196 pts/33  S+   08:14   1:03 /usr/bin/python /usr/local/bin/nova-api
+ctl      12825  0.0  0.3 314048 127256 pts/33  S+   08:14   0:00 /usr/bin/python /usr/local/bin/nova-api
+ctl      12826  0.0  0.3 314048 127256 pts/33  S+   08:14   0:00 /usr/bin/python /usr/local/bin/nova-api
+ctl      14000  0.8  0.2 230244 72244 pts/39   S+   08:14   0:24 /usr/bin/python /usr/local/bin/nova-conductor --config-file /etc/nova/nova.conf
+ctl      14049  2.1  0.2 249572 84160 pts/39   S+   08:14   1:04 /usr/bin/python /usr/local/bin/nova-conductor --config-file /etc/nova/nova.conf
+ctl      14050  2.1  0.2 249824 84320 pts/39   S+   08:14   1:04 /usr/bin/python /usr/local/bin/nova-conductor --config-file /etc/nova/nova.conf
+ctl      14060  2.0  0.3 278936 105748 pts/40  S+   08:14   1:00 /usr/bin/python /usr/local/bin/nova-cert --config-file /etc/nova/nova.conf
+ctl      14132  1.8  0.2 239284 81432 pts/41   S+   08:14   0:53 /usr/bin/python /usr/local/bin/nova-scheduler --config-file /etc/nova/nova.conf
+ctl      14253  1.7  0.2 240400 82480 pts/43   S+   08:15   0:52 /usr/bin/python /usr/local/bin/nova-consoleauth --config-file /etc/nova/nova.conf
+root     14314  0.0  0.0  15064  1992 pts/44   S+   08:15   0:00 sg libvirtd /usr/local/bin/nova-compute --config-file /etc/nova/nova.conf
+ctl      14331  2.3  0.3 1915980 127792 pts/44 Sl+  08:15   1:08 /usr/bin/python /usr/local/bin/nova-compute --config-file /etc/nova/nova.conf
+libvirt+ 18909  0.2  0.7 3126956 255484 ?      Sl   08:21   0:05 qemu-system-x86_64 -enable-kvm -name instance-00000001 -S -machine pc-i440fx-vivid,accel=kvm,usb=off -m 512 -realtime mlock=off -smp 1,sockets=1,cores=1,threads=1 -uuid bff0da57-1b88-4acb-b7a4-420324cb7238 -smbios type=1,manufacturer=OpenStack Foundation,product=OpenStack Nova,version=13.0.0,serial=4c4c4544-0054-4e10-8048-c2c04f533732,uuid=bff0da57-1b88-4acb-b7a4-420324cb7238,family=Virtual Machine -no-user-config -nodefaults -chardev socket,id=charmonitor,path=/var/lib/libvirt/qemu/instance-00000001.monitor,server,nowait -mon chardev=charmonitor,id=monitor,mode=control -rtc base=utc,driftfix=slew -global kvm-pit.lost_tick_policy=discard -no-hpet -no-shutdown -boot strict=on -kernel /opt/stack/data/nova/instances/bff0da57-1b88-4acb-b7a4-420324cb7238/kernel -initrd /opt/stack/data/nova/instances/bff0da57-1b88-4acb-b7a4-420324cb7238/ramdisk -append root=/dev/vda console=tty0 console=ttyS0 -device piix3-usb-uhci,id=usb,bus=pci.0,addr=0x1.0x2 -drive file=/opt/stack/data/nova/instances/bff0da57-1b88-4acb-b7a4-420324cb7238/disk,if=none,id=drive-virtio-disk0,format=qcow2,cache=none -device virtio-blk-pci,scsi=off,bus=pci.0,addr=0x4,drive=drive-virtio-disk0,id=virtio-disk0,bootindex=1 -drive file=/opt/stack/data/nova/instances/bff0da57-1b88-4acb-b7a4-420324cb7238/disk.config,if=none,id=drive-ide0-1-1,readonly=on,format=raw,cache=none -device ide-cd,bus=ide.1,unit=1,drive=drive-ide0-1-1,id=ide0-1-1 -netdev tap,fd=24,id=hostnet0,vhost=on,vhostfd=25 -device virtio-net-pci,netdev=hostnet0,id=net0,mac=fa:16:3e:cd:46:f8,bus=pci.0,addr=0x3 -chardev file,id=charserial0,path=/opt/stack/data/nova/instances/bff0da57-1b88-4acb-b7a4-420324cb7238/console.log -device isa-serial,chardev=charserial0,id=serial0 -chardev pty,id=charserial1 -device isa-serial,chardev=charserial1,id=serial1 -vnc 127.0.0.1:0 -k en-us -device cirrus-vga,id=video0,bus=pci.0,addr=0x2 -device virtio-balloon-pci,id=balloon0,bus=pci.0,addr=0x5 -msg timestamp=on
+ctl      33539  0.1  0.1 217828 49640 pts/4    S    08:50   0:01 /usr/bin/python /usr/local/bin/nova-novncproxy --config-file /etc/nova/nova.conf --web /opt/stack/noVNC
+ctl      36111  2.2  0.1 218344 41744 pts/4    S    08:55   0:11 /usr/bin/python /usr/local/bin/nova-novncproxy --config-file /etc/nova/nova.conf --web /opt/stack/noVNC
+ctl      39296  0.0  0.1 217828 40712 pts/4    S    09:01   0:00 /usr/bin/python /usr/local/bin/nova-novncproxy --config-file /etc/nova/nova.conf --web /opt/stack/noVNC
+ctl      39297  0.0  0.1 217828 40708 pts/4    S    09:01   0:00 /usr/bin/python /usr/local/bin/nova-novncproxy --config-file /etc/nova/nova.conf --web /opt/stack/noVNC
+ctl      39298  0.0  0.1 217828 40708 pts/4    S    09:01   0:00 /usr/bin/python /usr/local/bin/nova-novncproxy --config-file /etc/nova/nova.conf --web /opt/stack/noVNC
+ctl      39299  0.0  0.1 217828 40704 pts/4    S    09:01   0:00 /usr/bin/python /usr/local/bin/nova-novncproxy --config-file /etc/nova/nova.conf --web /opt/stack/noVNC
+ctl      39302  2.2  0.1 218344 41752 pts/4    S    09:01   0:03 /usr/bin/python /usr/local/bin/nova-novncproxy --config-file /etc/nova/nova.conf --web /opt/stack/noVNC
+ctl      40420  0.0  0.0  15948  2412 pts/51   R+   09:04   0:00 grep --color=auto nova
